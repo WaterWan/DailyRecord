@@ -2,3 +2,6 @@
 2.统一jdk
 3.统一同步工具
 4.统一编码标准
+5.MySQL
+6.Maven
+7.Jenkins
