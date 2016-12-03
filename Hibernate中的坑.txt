@@ -1,0 +1,42 @@
+﻿映射枚举类型
+<property name="status">
+	<column name="ORDERSTATUS" length="20" not-null="true" />
+		<type name="org.hibernate.type.EnumType">
+			<param name="enumClass">utils.info.order.OrderStatus</param>
+			<param name="type">12</param>
+		</type>
+</property>
+
+
+
+映射LocalDateTime类型
+不需要添加type
+
+
+
+映射boolean类型
+get/set方法：
+has* 属性不会受到影响
+is* 属性需要修改
+正常JavaBean的规范：
+boolean isReviewed;
+
+public boolean isReviewed() {
+	return isReviewed;
+}
+
+public void setReviewed(boolean isReviewed) {
+	this.isReviewed = isReviewed;
+}
+
+Hibernate需要用到的方法
+public boolean isIsReviewed() {
+	return isReviewed;
+}
+
+public abstract OrderInfoTemplate setIsReviewed(boolean isReviewed);
+
+Maven的src和test里面的hibernate.cfg.xml都需要修改
+
+String hql = "from OrderPo where HOTELID = ?";//查询语句
+这里的from应该是填实体类的名称而不是表的名称
