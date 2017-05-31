@@ -55,6 +55,7 @@ main(void)
     }
 
     /* process gift lines */
+    // 如果不能理解这里的i的取值范围，就证明题目没有完全读懂 
     for(i=0; i<np; i++) {
 	fscanf(fin, "%s %d %d", name, &amt, &ng);
 	giver = lookup(name);
