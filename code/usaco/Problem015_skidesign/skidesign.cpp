@@ -11,4 +11,6 @@ using namespace std;
 int main() {
 	freopen("skidesign.in", "r", stdin);
 	freopen("skidesign.out", "w", stdout);
+	
+	
 } 
