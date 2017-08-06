@@ -56,6 +56,8 @@ int main() {
 			cow_y += dy[cow_dir];
 		}
 		step_count++;
+		// 这里的250000
+		// farmer的状态其实最多有400种，农夫的状态最多有400种，两两组合最多有160000种，超过这么多种的时候，一定会存在某个时刻，与之前的情况相同，状态相同意味着运行轨迹相同，就是说会进入死循环 
 		if(!(step_count > 250000)) {
 			farmer[farmer_x][farmer_y][farmer_dir] = step_count;
 			cow[cow_x][cow_y][cow_dir] = step_count; 
