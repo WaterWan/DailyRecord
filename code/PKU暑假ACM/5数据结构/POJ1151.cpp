@@ -111,7 +111,7 @@ void BuildTree(CNode *pRoot, int L, int R) {
 }
 
 int main() {
-//	freopen("1151.in", "r", stdin);
+	freopen("1151.in", "r", stdin);
 	int n;
 	int i, j, k;
 	double x1, y1, x2, y2;
@@ -119,14 +119,16 @@ int main() {
 	int nCount = 0;
 	int t = 0;
 	while(true) {
-		cin >> n;
+//		cin >> n;
+		scanf("%d", &n); 
 		if(n == 0) {
 			break;
 		}
 		t++;
 		yc = lc = 0;
 		for(i = 0; i < n; i++) {
-			cin >> x1 >> y1 >> x2 >> y2;
+//			cin >> x1 >> y1 >> x2 >> y2;
+			scanf("%lf%lf%lf%lf", &x1, &y1, &x2, &y2);
 			y[yc++] = y1;
 			y[yc++] = y2;
 			lines[lc].x = x1;
