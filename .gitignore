@@ -1,2 +1,4 @@
-*.exe
+﻿*.exe
+*.in
+*.out
 code/51Nod/拉勾/A.cpp
